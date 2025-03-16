@@ -7,7 +7,7 @@ dotenv.config();
 
     await axios.post(
         urlRequestReview,
-        { reviewers: ["brenorodriguesdev"] },
+        { reviewers: ["PdrMed"] },
         { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
     );
 

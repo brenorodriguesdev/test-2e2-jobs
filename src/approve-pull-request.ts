@@ -8,14 +8,14 @@ dotenv.config();
 
   await axios.post(
     urlRequestReview,
-    { reviewers: ["brenorodriguesdev"] },
+    { reviewers: ["PdrMed"] },
     { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
   );
 
   const urlApproveReview = `https://api.github.com/repos/${process.env.REPO_NAME}/pulls/${process.env.PR_NUMBER}/reviews`;
   await axios.post(
     urlApproveReview,
-    { reviewers: ["brenorodriguesdev"], event: "APPROVE", body: "✅ Testes E2E aprovados! PR aprovado automaticamente." },
+    { event: "APPROVE", body: "✅ Testes E2E aprovados! PR aprovado automaticamente." },
     { headers: { Authorization: `token ${process.env.GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json" } }
   );
 })();
