@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "approve-pr": "ts-node src/approve-pull-request.ts",
+    "deny-pr": "ts-node src/deny-pull-request.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
